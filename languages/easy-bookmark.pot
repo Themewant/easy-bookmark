@@ -1,0 +1,508 @@
+# Copyright (C) 2026 Themewant
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Bookmark 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/easy-bookmark\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-30T16:35:14+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: easy-bookmark\n"
+
+#. Plugin Name of the plugin
+#: easy-bookmark.php
+#: admin/includes/class.admin-settings.php:17
+#: admin/includes/class.admin-settings.php:18
+#: public/includes/widget.php:44
+msgid "Easy Bookmark"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: easy-bookmark.php
+msgid "https://themewant.com/"
+msgstr ""
+
+#. Description of the plugin
+#: easy-bookmark.php
+msgid "Let visitors bookmark posts and pages and revisit them anytime from a dedicated page or widget."
+msgstr ""
+
+#. Author of the plugin
+#: easy-bookmark.php
+msgid "Themewant"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:102
+#: admin/includes/class.admin-settings.php:272
+msgid "General Settings"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:146
+msgid "Bookmark Label:"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:152
+msgid "Show Bookmark Label"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:159
+#: public/includes/widget.php:126
+msgid "Bookmark Label"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:165
+msgid "Bookmarked Label"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:171
+msgid "Bookmark Tooltip"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:177
+msgid "Bookmarked Tooltip"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:183
+msgid "Bookmark Empty Message"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:189
+msgid "Integration:"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:196
+msgid "Auto Integration"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:198
+msgid "After Content"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:199
+msgid "Before Content"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:200
+msgid "Disable Auto Integration"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:207
+msgid "Shortcode"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:214
+msgid "Shortcode in PHP Script"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:221
+msgid "Allowed Post Type"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:224
+msgid "Post"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:225
+msgid "Page"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:232
+msgid "Bookmark in Archive"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:239
+msgid "Posts Per Page for Bookmark Listing"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:245
+msgid "Bookmark Listing Page"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:265
+msgid "Easy Bookmark Settings"
+msgstr ""
+
+#: admin/includes/class.admin-settings.php:273
+#: admin/includes/class.admin-settings.php:284
+msgid "About Us"
+msgstr ""
+
+#: admin/includes/class.templates.php:60
+msgid "Easy Bookmark Listing"
+msgstr ""
+
+#: class.easy-bookmark.php:81
+msgid "Settings"
+msgstr ""
+
+#: class.easy-bookmark.php:96
+msgid "Easy Bookmark Addons"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:66
+msgid "View All"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:67
+msgid "Delete All"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:115
+#: public/includes/plugin-scripts.php:32
+msgid "Your bookmark is empty!"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:229
+msgid "Saved articles"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:230
+msgid "You have not yet added any article to your bookmarks!"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:231
+msgid "Browse articles"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:246
+msgid "Bookmark"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:247
+msgid "Bookmarked"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:256
+msgid "Add to Bookmark"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:257
+msgid "Added to Bookmark"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:279
+msgid "Bookmark this post as saved"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:354
+msgid "&laquo; Previous"
+msgstr ""
+
+#: public/includes/class.bookmark-view.php:355
+msgid "Next &raquo;"
+msgstr ""
+
+#: public/includes/plugin-scripts.php:33
+msgid "Empty Bookmark!"
+msgstr ""
+
+#: public/includes/widget.php:68
+msgid "Content Settings"
+msgstr ""
+
+#: public/includes/widget.php:75
+msgid "Posts Per Page"
+msgstr ""
+
+#: public/includes/widget.php:85
+msgid "Meta Show / Hide"
+msgstr ""
+
+#: public/includes/widget.php:89
+#: public/includes/widget.php:138
+msgid "Yes"
+msgstr ""
+
+#: public/includes/widget.php:90
+#: public/includes/widget.php:139
+msgid "No"
+msgstr ""
+
+#: public/includes/widget.php:101
+msgid "Bookmark Icon"
+msgstr ""
+
+#: public/includes/widget.php:113
+msgid "Count Position"
+msgstr ""
+
+#: public/includes/widget.php:117
+msgid "Top"
+msgstr ""
+
+#: public/includes/widget.php:118
+#: public/includes/widget.php:574
+msgid "Right"
+msgstr ""
+
+#: public/includes/widget.php:136
+msgid "Enable Count"
+msgstr ""
+
+#: public/includes/widget.php:152
+msgid "Counter Box"
+msgstr ""
+
+#: public/includes/widget.php:159
+#: public/includes/widget.php:990
+msgid "Icon Size"
+msgstr ""
+
+#: public/includes/widget.php:171
+#: public/includes/widget.php:225
+msgid "Box Height"
+msgstr ""
+
+#: public/includes/widget.php:183
+#: public/includes/widget.php:237
+msgid "Box Width"
+msgstr ""
+
+#: public/includes/widget.php:196
+#: public/includes/widget.php:298
+msgid "Box Background"
+msgstr ""
+
+#: public/includes/widget.php:205
+msgid "Counter"
+msgstr ""
+
+#: public/includes/widget.php:213
+msgid "Number Font Size"
+msgstr ""
+
+#: public/includes/widget.php:249
+msgid "Position Top"
+msgstr ""
+
+#: public/includes/widget.php:273
+msgid "Position Right"
+msgstr ""
+
+#: public/includes/widget.php:311
+msgid "Modal"
+msgstr ""
+
+#: public/includes/widget.php:318
+msgid "Modal Container"
+msgstr ""
+
+#: public/includes/widget.php:327
+msgid "Height"
+msgstr ""
+
+#: public/includes/widget.php:347
+msgid "Width"
+msgstr ""
+
+#: public/includes/widget.php:363
+msgid "Modal Background"
+msgstr ""
+
+#: public/includes/widget.php:372
+msgid "Body Padding"
+msgstr ""
+
+#: public/includes/widget.php:382
+msgid "Modal Header"
+msgstr ""
+
+#: public/includes/widget.php:391
+msgid "Modal Header Background"
+msgstr ""
+
+#: public/includes/widget.php:400
+msgid "Title Padding"
+msgstr ""
+
+#: public/includes/widget.php:411
+msgid "Title Typography"
+msgstr ""
+
+#: public/includes/widget.php:418
+msgid "Close Icon Color"
+msgstr ""
+
+#: public/includes/widget.php:429
+msgid "Close Icon Background Color"
+msgstr ""
+
+#: public/includes/widget.php:439
+msgid "Close Icon Size"
+msgstr ""
+
+#: public/includes/widget.php:451
+msgid "Close Icon Box Height"
+msgstr ""
+
+#: public/includes/widget.php:463
+msgid "Close Icon Box Width"
+msgstr ""
+
+#: public/includes/widget.php:478
+msgid "Action Bar"
+msgstr ""
+
+#: public/includes/widget.php:485
+#: public/includes/widget.php:1033
+msgid "Padding"
+msgstr ""
+
+#: public/includes/widget.php:495
+#: public/includes/widget.php:953
+#: public/includes/widget.php:1048
+msgid "Margin"
+msgstr ""
+
+#: public/includes/widget.php:505
+#: public/includes/widget.php:649
+#: public/includes/widget.php:677
+#: public/includes/widget.php:718
+#: public/includes/widget.php:746
+#: public/includes/widget.php:871
+#: public/includes/widget.php:899
+msgid "Background Color"
+msgstr ""
+
+#: public/includes/widget.php:515
+#: public/includes/widget.php:610
+msgid "Border Radius"
+msgstr ""
+
+#: public/includes/widget.php:526
+msgid "Buttons"
+msgstr ""
+
+#: public/includes/widget.php:535
+msgid "Button Typography"
+msgstr ""
+
+#: public/includes/widget.php:543
+msgid "Button Width"
+msgstr ""
+
+#: public/includes/widget.php:562
+msgid "Alignment"
+msgstr ""
+
+#: public/includes/widget.php:566
+msgid "Left"
+msgstr ""
+
+#: public/includes/widget.php:570
+msgid "Center"
+msgstr ""
+
+#: public/includes/widget.php:578
+msgid "Space Between"
+msgstr ""
+
+#: public/includes/widget.php:591
+msgid "Button Space Between"
+msgstr ""
+
+#: public/includes/widget.php:621
+msgid "View All Button"
+msgstr ""
+
+#: public/includes/widget.php:633
+#: public/includes/widget.php:702
+#: public/includes/widget.php:865
+msgid "Normal"
+msgstr ""
+
+#: public/includes/widget.php:639
+#: public/includes/widget.php:667
+#: public/includes/widget.php:708
+#: public/includes/widget.php:736
+msgid "Color"
+msgstr ""
+
+#: public/includes/widget.php:661
+#: public/includes/widget.php:730
+#: public/includes/widget.php:893
+msgid "Hover"
+msgstr ""
+
+#: public/includes/widget.php:690
+msgid "Delete All Button"
+msgstr ""
+
+#: public/includes/widget.php:768
+msgid "Item"
+msgstr ""
+
+#: public/includes/widget.php:778
+msgid "Box Shadow"
+msgstr ""
+
+#: public/includes/widget.php:787
+msgid "Background"
+msgstr ""
+
+#: public/includes/widget.php:805
+msgid "Item Padding"
+msgstr ""
+
+#: public/includes/widget.php:816
+msgid "Item Border radius"
+msgstr ""
+
+#: public/includes/widget.php:829
+msgid "Item Spacing"
+msgstr ""
+
+#: public/includes/widget.php:841
+msgid "Item Space Between Image & Contents"
+msgstr ""
+
+#: public/includes/widget.php:853
+msgid "Remove Button"
+msgstr ""
+
+#: public/includes/widget.php:881
+msgid "Icon Color"
+msgstr ""
+
+#: public/includes/widget.php:909
+msgid "Icon Color Hover"
+msgstr ""
+
+#: public/includes/widget.php:923
+msgid "Meta"
+msgstr ""
+
+#: public/includes/widget.php:931
+msgid "Meta Color"
+msgstr ""
+
+#: public/includes/widget.php:942
+msgid "Meta Icon Color"
+msgstr ""
+
+#: public/includes/widget.php:969
+msgid "Item Space Between"
+msgstr ""
+
+#: public/includes/widget.php:982
+#: public/includes/widget.php:1064
+msgid "Typography"
+msgstr ""
+
+#: public/includes/widget.php:1004
+msgid "Title"
+msgstr ""
+
+#: public/includes/widget.php:1012
+msgid "Title Color"
+msgstr ""
+
+#: public/includes/widget.php:1022
+msgid "Title Hover Color"
+msgstr ""

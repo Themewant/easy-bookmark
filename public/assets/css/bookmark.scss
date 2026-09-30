@@ -1,0 +1,572 @@
+:root {
+    --color-primary: #e62323;  
+    --esbmrk-post-popup-bg: #fff;
+}
+a.esbmrk-add-to-bookmark-btn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    .esbmrk-tooltip {
+        position: absolute;
+        opacity: 0;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: bottom;
+        font-size: 12px;
+        background: #383838;
+        color: #fff;
+        width: max-content;
+        padding: 4px 12px 3px 12px;
+        border-radius: 3px;
+        font-weight: 300;
+        transition: 0.2s all;
+        display: none;
+    }
+    .esbmrk-bookmark-label {
+        margin-left: 2px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .esbmrk-icon {
+        display: flex;
+        align-items: center;
+        background: url(../img/bookmark.svg);
+        height: 18px;
+        width: 17px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .7;
+    }
+    &.esbmrk-marked {
+        .esbmrk-icon {
+            background: url(../img/bookmark-esbmrk-icon-black.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 14px;
+            background-position: 1px;
+        }
+    }
+    &:hover {
+        .esbmrk-tooltip {
+            transform: scale(1) translateX(-50%);
+            opacity: 1;
+            top: -40px;
+            display: block;
+        }
+        
+    }
+}
+.esbmrk-counter-box {
+    display: inline-flex;
+    position: relative;
+    .esbmrk-counter {
+        cursor: pointer;
+        position: relative;
+        font-size: .875rem;
+        font-weight: 600;
+        color: #121212;
+        br {
+            display: none;
+        }
+        .esbmrk-icon {   
+            position: relative;  
+            top: 4px;       
+            svg {
+                fill: #121212;
+                width: 13px;
+            }
+        }
+        .esb-count-title{
+            font-style: normal;
+            margin-left: 4px;
+        }
+        .esbmrk-total-marked:not(.esbm_position_right) {
+            height: 20px;
+            width: 20px;
+            background: var(--color-primary);
+            border-radius: 100%;
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            font-size: 10px;
+            padding: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            z-index: 2;
+            &.esbm_icon_text_yes{
+                left: -12px;
+                right: auto;
+            }
+        }
+    }
+    #esbmrk_popup_modal {
+        @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0} 
+            to {top:0; opacity:1}
+        }
+        
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        padding-top: 80px; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        overflow: hidden;
+        .esbmrk-modal-content {
+            > p {
+                display: none;
+            }
+            position: relative;
+            background-color: #f9f9f9;
+            margin: auto;
+            padding: 0;
+            border: none;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            border-radius: 8px;
+            overflow: hidden;
+            .esbmark-empty-btn{
+                background: var(--color-primary);
+                color: #fff;
+                border-radius: 8px;
+                padding: 11px 25px;
+                margin: 30px 0 0;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 600;
+                &:hover{
+                    opacity: .9;
+                }
+            }
+            .esbmrk-modal-header {
+                padding: 0px 0 40px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .esbmrk-deleteing-loader {
+                position: absolute;
+                z-index: 3;
+                background: #fff;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: none;
+                .dotlottie-player {
+                    margin-top: -200px;
+                }
+            }
+            .esbmrk-modal-body {
+                padding: 30px 30px;
+                position: relative;
+                overflow: hidden;
+                min-height: 420px;
+                .esbmrk-empty-posts {
+                    position: absolute;
+                    left: 50%;
+                    top: 45%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    width: 90%;
+                    svg{
+                        height: 35px;
+                        path{
+                            fill: var(--color-primary);
+                        }
+                    }
+                    h5{
+                        margin: 0 0 10px;
+                        font-size: 30px;
+                        line-height: 1.3;
+                    }
+                    p{
+                        margin: 0;
+                        line-height: 1.3;
+                    }
+                }                
+                .esbmrk-action-bar {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 4px;
+                    p, br {
+                        display: none;
+                    }                    
+                    .esbmrk-action-btn{
+                        border: none;
+                        color: #fff;
+                        padding: 7px 16px;
+                        border-radius: 4px;
+                        font-size: 13px;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        cursor: pointer;
+                        text-decoration: none;
+                        justify-content: space-between;
+                        width: 100px;
+                        &.esbmrk_view_all_trigger {
+                            background: rgb(0 161 102);
+                            justify-content: center;
+                            transition: 0.5s all;
+                            &:hover {
+                                background: #333;
+                            }
+                        }
+                        &.esbmrk_delete_all_trigger {
+                            background: #cf2e2e;
+                            transition: 0.5s all;
+                            &:hover {
+                                background: #333;
+                            }
+                            &:disabled {
+                                background: #918d8d;
+                            }
+                            svg {
+                                fill: currentColor;
+                                width: 15px;
+                            }
+                        }
+                        
+                    }
+                }
+                .esbmrk-posts {
+                    overflow: auto;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+                    padding-bottom: 100px;
+                    .esbmrk-add-to-bookmark-btn {
+                        display: none;
+                    }
+                    .esbmrk-article {
+                        display: flex;
+                        background: #fff;
+                        overflow: hidden;
+                        min-height: 96px;
+                        position: relative;
+                        border-radius: 4px;
+                        .esbmrk-article-inner {
+                            display: flex;
+                            position: relative;
+                            gap: 20px;
+                            width: 100%;
+                            align-items: center;
+                            .esbmrk-col-left {
+                                width: 100px;
+                                .esbmrk-article-thumbnail {
+                                    width: 100%;
+                                    height: auto;
+                                    display: block;
+                                }
+                            }
+                            .esbmrk-col-right {
+                                width: calc(100% - 100px);
+                                padding-right: 20px;
+                                .esbmrk-article-title {
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    text-decoration: none;
+                                    transition: 0.5s all;
+                                    display: block;
+                                    color: #121212;
+                                    margin-bottom: 5px;
+                                    line-height: 1.5;
+                                    &:hover{
+                                        opacity: .8;
+                                    }
+                                }
+                                .esbmrk-article-metas {
+                                    font-size: 13px;
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 8px;
+                                    .esbmrk-meta {
+                                        font-size: 14px;
+                                        .esbmrk-meta-icon {
+                                            margin-right: 8px;
+                                            svg {
+                                                fill: currentColor;
+                                                width: 14px;
+                                                margin-bottom: -2px;
+                                            }
+                                            &.esbmrk-meta-icon-user{
+                                                position: relative;
+                                                padding-left: 15px;
+                                                margin-left: 8px;
+                                                svg{
+                                                    width: 12px;
+                                                }
+                                                &::before{
+                                                    content: "";
+                                                    position: absolute;
+                                                    left: 0;
+                                                    top: 4px;
+                                                    background: #1212123d;
+                                                    width: 1px;
+                                                    height: 11px;
+                                                }
+                                            }
+                                        }
+                                        span.esbmrk-meta-value {
+                                            font-size: 16px;
+                                            line-height: 1;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        label.esbmrk-form-control.esbmrk-remove-btn {
+                            display: flex;
+                            align-items: center;
+                            transition: 0.5s all;
+                            cursor: pointer;
+                            input {
+                                display: none;
+                            }
+                            .esbmrk-icon {
+                                display: block;
+                                padding-left: 10px;
+                                padding-right: 10px;
+                                left: -5px;
+                                z-index: 1;
+                                top: -4px;
+                            }
+                            &:hover {
+                                background: #cf2e2e;
+                                color: #fff;
+                                .esbmrk-icon {
+                                    color: currentColor;
+                                    svg path {
+                                       fill: currentColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.esbmrk-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    .esbmrk-col-right{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .esbmrk-article {
+        position: relative;
+        a.esbmrk-article-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #121212;
+            line-height: 1.3;
+            margin-top: 25px;
+            margin-bottom: 8px;
+            display: block;
+            &:hover{
+                color: var(--color-primary);
+            }
+        }
+        .esbmrk-article-inner{
+            margin-bottom: 20px;
+        }
+        .esbmrk-article-metas {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            justify-content: center;
+            .esbmrk-meta {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                svg {
+                    height: 13px;
+                    width: auto;
+                    position: relative;
+                    top: 1px;
+                    fill:currentColor;
+                }
+                .esbmrk-meta-icon-user{
+                    position: relative;
+                    padding-left: 15px;
+                    margin-left: 8px;
+                    svg{
+                        width: 12px;
+                    }
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: -2px;
+                        top: 6px;
+                        background: #1212123d;
+                        width: 1px;
+                        height: 11px;
+                    }
+                }
+            }
+        }
+        .esbmrk-col-left {
+            border-radius: 5px;
+            overflow: hidden;
+            line-height: 0;
+            img.esbmrk-article-thumbnail {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                transition: all .5s ease;
+            }
+        }
+        .esbmrk-remove-btn {
+            input {
+                display: none;
+            }            
+        }
+        &:hover{
+            img.esbmrk-article-thumbnail {
+                transform: scale(1.1);
+            }
+            .esbmrk-remove-btn {
+                display: flex;
+            }
+        }
+        
+    }
+}
+
+div:not(.esbmrk-modal-body){
+    .esbmrk-posts{
+        .esbmrk-empty-posts{
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid rgb(102 102 102 / 6%);
+            padding: 80px;
+            border-radius: 8px;
+            i{
+                display: block;
+                font-size: 50px;
+                color: var(--color-primary);
+            }
+            strong{
+                display: block;
+                font-size: 30px;
+                color: #121212;
+                line-height: 1.3;
+                margin: 15px 0 6px;
+            }
+            a{
+                background: var(--color-primary);
+                color: #fff;
+                border-radius: 8px;
+                padding: 11px 25px;
+                margin: 30px 0 0;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 600;
+                &:hover{
+                    opacity: .9;
+                }
+            }
+        }
+    }
+}
+
+.esbmrk-pagination {
+    margin-top: 50px;
+    ul.esbmrk-pagination-list {
+        display: flex;
+        list-style: none;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+        li {
+            a, span {
+                background: #111111;
+                color: #fff;
+                border-radius: 3px;
+                padding: 12px 20px;
+                &.current, &:hover {
+                    background: #333;
+                }
+            }
+        }
+    }
+}
+
+
+.esbmrk-modal-close{
+    cursor: pointer;
+    position: absolute;
+    right: 9px;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;    
+}
+.esbmrk-icon-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1490196078);
+    z-index: 1;
+}
+.esbmrk-modal-close:hover,
+.esbmrk-icon-close:hover {
+    opacity: .9;
+}
+
+.esbmrk-modal-close:before, .esbmrk-modal-close:after,
+.esbmrk-icon-close:before, .esbmrk-icon-close:after {
+    content: " ";
+    position: absolute;
+    left: 16px;    
+    height: 16px;
+    width: 1px;
+    background-color: #000000;
+    top: 8px;
+}
+
+
+.esbmrk-modal-close::before,
+.esbmrk-icon-close:before {
+    transform: rotate(45deg);
+}
+.esbmrk-modal-close::after,
+.esbmrk-icon-close:after {
+    transform: rotate(-45deg);
+}
+  

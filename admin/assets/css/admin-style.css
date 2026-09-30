@@ -1,0 +1,131 @@
+:root {
+  --esbmrk-primaryColorAdmin: #6648fe;
+  --esbmrk-bgColorAdmin: rgba(93, 93, 255, 0.13);
+  --esbmrk-titleColorAdmin: #181839;
+}
+
+#toplevel_page_easy-bookmark .wp-menu-image img {
+  height: 22px;
+  width: 32px;
+  padding-top: 6px;
+}
+
+.toplevel_page_easy-bookmark #wpbody-content {
+  float: none;
+}
+.toplevel_page_easy-bookmark #wpbody-content .notice, .toplevel_page_easy-bookmark #wpbody-content div.error, .toplevel_page_easy-bookmark #wpbody-content div.updated {
+  margin-bottom: 10px;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper {
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs {
+  margin: auto;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs ul#tabs-nav {
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  display: flex;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ededed;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs ul#tabs-nav li {
+  float: left;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs ul#tabs-nav li a {
+  text-decoration: none;
+  color: #181839;
+  padding: 16px 25px;
+  display: block;
+  font-size: 16px;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs ul#tabs-nav li:hover a, .toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs ul#tabs-nav li.active a {
+  color: var(--esbmrk-primaryColorAdmin);
+  background-color: var(--esbmrk-bgColorAdmin);
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper {
+  background: #fff;
+  padding: 0 30px;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content {
+  padding: 30px 0;
+  height: 600px;
+  overflow: auto;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content input,
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content select {
+  width: 200px !important;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content input[type=checkbox] {
+  font-size: 13px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 3.5em;
+  max-width: 3.5em;
+  height: 1.5em;
+  background: var(--esbmrk-bgColorAdmin);
+  border-radius: 3em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 0;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content input[type=checkbox]:checked {
+  background: var(--esbmrk-primaryColorAdmin);
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content input[type=checkbox]:after {
+  position: absolute;
+  content: "";
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+  transform: scale(0.7);
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content input[type=checkbox]:checked:after {
+  left: calc(100% - 1.5em);
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content input[type=checkbox]:checked::before {
+  display: none;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content th[scope=row] {
+  display: none;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content .settings-section:first-child {
+  margin-top: 0;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content .settings-section:not(:first-child) {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content .settings-item {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .tab-contents-wrapper .tab-content .settings-item label {
+  min-width: 150px;
+  width: 150px;
+  display: inline-block;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .form-footer {
+  background: #fff;
+  position: sticky;
+  bottom: -30px;
+  margin-left: 10px;
+}
+.toplevel_page_easy-bookmark .easy-bookmark-settings-tabs-wrapper .tabs.easy-bookmark-settings-tabs .form-footer input[type=submit].button-primary {
+  background: var(--esbmrk-primaryColorAdmin) !important;
+  border-color: var(--esbmrk-primaryColorAdmin) !important;
+}/*# sourceMappingURL=admin-style.css.map */
